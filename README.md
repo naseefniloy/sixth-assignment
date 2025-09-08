@@ -45,3 +45,48 @@ function add(a, b) {
 
 // Arrow function
 const add = (a, b) => a + b;
+
+
+
+4) Destructuring Assignment
+
+This is a neat way to pull out values from arrays or objects into variables.
+
+Example with an array:
+
+const numbers = [10, 20, 30];
+const [first, second] = numbers;
+console.log(first);  // 10
+console.log(second); // 20
+
+
+Example with an object:
+
+const user = { name: "Niloy", age: 22 };
+const { name, age } = user;
+console.log(name); // Niloy
+console.log(age);  // 22
+
+
+
+5) Template Literals
+
+Instead of using + to join strings, ES6 gave us template literals using backticks (`). They make strings cleaner and allow you to insert variables directly with ${ }.
+
+Example:
+
+const name = "Niloy";
+const age = 22;
+
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+
+With normal concatenation you’d write:
+
+console.log("My name is " + name + " and I am " + age + " years old.");
+
+
+The template literal version is easier to read, supports multi-line strings, and is less error-prone.
+
+
+---
