@@ -1,3 +1,10 @@
+// Mobile menu button 
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
 // API Endpoints
 const API = {
     allPlants: 'https://openapi.programming-hero.com/api/plants',
@@ -165,7 +172,7 @@ function displayTrees(trees) {
         treeCard.className = 'tree-card bg-white rounded-xl shadow overflow-hidden';
         
         treeCard.innerHTML = `
-            <img src="${tree.image}" alt="${tree.name}" class="w-full h-48 object-cover">
+            <img src="${tree.image}" alt="${tree.name}" class="w-full h-48 p-2 object-cover rounded-xl">
             <div class="p-4">
                 <h3 class="text-lg font-semibold mb-2 tree-name">${tree.name}</h3>
                 <p class="text-sm text-gray-600 mb-2">${tree.description.substring(0, 50)}...</p>

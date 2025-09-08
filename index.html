@@ -9,34 +9,58 @@
 </head>
 <body class="bg-green-50">
     <!-- Navbar -->
-    <nav class="bg-green-700 text-white py-4 px-6 flex justify-between items-center">
-        <a href=""><div class="text-xl font-bold">Green Earth</div></a>
-        <div class="hidden md:flex space-x-6">
-            <a href="#" class="hover:text-green-200">About</a>
-            <a href="#" class="hover:text-green-200">Gallery</a>
-            <a href="#" class="hover:text-green-200">Plant a Tree</a>
-        </div>
-        <div>
-            <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-3xl">Plant a Tree</button>
-        </div>
-    </nav>
+        <nav class="bg-green-700 text-white py-4 px-6 flex justify-between items-center">
+          <a href="#" class="text-xl font-bold">Green Earth</a>
+  
+            <!-- Desktop Menu -->
+             <div class="hidden md:flex space-x-6">
+                  <a href="#" class="hover:text-green-200">About</a>
+                  <a href="#" class="hover:text-green-200">Gallery</a>
+                  <a href="#" class="hover:text-green-200">Plant a Tree</a>
+             </div>
+
+            <!-- Mobile Menu Button -->
+             <button id="menu-btn" class="md:hidden focus:outline-none">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+                 </svg>
+             </button>
+
+            <!-- CTA Button -->
+             <div class="hidden md:block">
+                 <button class="bg-yellow-500 hover:bg-yellow-600 text-[#15803D] px-4 py-2 rounded-3xl">Plant a Tree</button>
+             </div>
+        </nav>
+
+    <!-- Mobile Dropdown -->
+   <div id="mobile-menu" class="hidden md:hidden bg-white text-black flex flex-col space-y-2 p-4">
+      <a href="#" class="hover:text-green-700">About</a>
+      <a href="#" class="hover:text-green-700">Gallery</a>
+      <a href="#" class="hover:text-green-700">Plant a Tree</a>
+   </div>
 
     <!-- Banner Section -->
-    <section class="banner-section flex items-center justify-center pt-2">
-        <!-- Left Leaf -->
-        <div class="hidden md:block">
-         <img src="assets/hero-leaf1.png" alt="Left Leaf">
-        </div>
-        <!-- Center Content -->
-        <div class="max-w-4xl mx-auto text-center">
-         <h1 class="text-4xl md:text-4xl font-bold text-[#1F2937] mb-4">Plant a Tree, Grow a Future</h1>
-         <p class="text-lg text-[#1F2937] mb-6">Join our mission to plant 1 million trees and create a greener planet for future generations.</p>
-         <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-3xl">Get Involved</button>
-        </div>
-        <!-- Right Leaf -->
-        <div class="hidden md:block">
-         <img src="assets/hero-leaf2.png" alt="Right Leaf">
-        </div>
+    <section class="relative bg-[url('assets/hero-leaf1.png')] bg-cover bg-center md:bg-none bg-[#58a878] md:bg-[#CFF0DC] flex justify-between items-center p-10 md:p-0">
+        <!-- Overlay -->
+         <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent md:hidden"></div>
+         <!-- Text & Button -->
+          <div><img src="assets/hero-leaf1.png" alt="" class="hidden md:block"></div>
+          <div class="text-center relative z-10">
+            <h1 class="text-[18px] md:text-3xl text-white md:text-black font-bold">
+            Plant a Tree, Grow a Future
+          </h1>
+          <p class="text-[12px] md:text-[16px] text-white md:text-[#1F2937] my-3 md:my-5">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </p>
+          <button class="btn text-[#15803D] bg-yellow-500 hover:bg-yellow-600 border-none rounded-3xl text-[10px] md:text-[16px] h-7 md:h-10 px-2 md:px-3">
+            Get Involved
+          </button>
+          </div>
+          <div>
+          <img src="assets/hero-leaf2.png" alt="" class="hidden md:block">
+        </div>    
     </section>
 
 
@@ -90,7 +114,7 @@
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="w-full md:w-1/2">
                     <img src="assets/about.png" 
-                         alt="Young plant growing" class="rounded-lg shadow-lg w-full">
+                         alt="Young plant growing" class="rounded-lg shadow-lg w-auto">
                 </div>
                 <div class="w-full md:w-1/2">
                     <p class="text-gray-700 mb-4">Green Earth is a global tree plantation initiative dedicated to fighting deforestation and climate change. By planting trees worldwide, we create habitats for wildlife, improve air quality, and combat global warming.</p>
