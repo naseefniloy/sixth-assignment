@@ -8,3 +8,40 @@
 
 - **const**  
   Very similar to `let` in terms of block-scope, but the value can’t be reassigned. You must give it an initial value when declaring. For arrays and objects, the reference can’t change, but the contents can still be modified.
+
+
+  
+## 2) Difference between `map()`, `forEach()`, and `filter()`
+
+- **`map()`**
+  - Creates a **new array** by applying a function to each element.
+  - Does not modify the original array.
+  - Returns the new transformed array.
+
+- **`forEach()`**
+  - Executes a function for each element in the array.
+  - Does **not** return anything (always returns `undefined`).
+  - Used mainly for side effects (e.g., logging, updating external variables).
+
+- **`filter()`**
+  - Creates a **new array** containing elements that satisfy a given condition.
+  - Does not modify the original array.
+  - Returns the filtered array (could be empty if no elements pass).
+
+
+
+## 3) Arrow Functions in ES6
+
+- A shorter and cleaner syntax for writing functions.
+- Do not have their own `this`, `arguments`, `super`, or `new.target`.
+- Useful for callbacks and when you want lexical scoping of `this`.
+
+**Example:**
+```js
+// Normal function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
