@@ -98,7 +98,7 @@ const showPlants = (plants) => {
         <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">${plant.category}</span>
         <span class="font-semibold price">৳${plant.price}</span>
       </div>
-      <button class="mt-3 bg-green-600 hover:bg-green-700 text-white py-2 rounded-3xl cursor-pointer" id="add-cart">
+      <button class="mt-3 bg-green-600 hover:bg-green-700 text-white py-2 rounded-4xl cursor-pointer" id="add-cart">
         Add to Cart
       </button>
     `;
